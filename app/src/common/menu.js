@@ -162,19 +162,19 @@ const menuData = [
     children: [
       {
         name: '账单',
-        path: 'login',
+        path: 'bill',
       },
       {
         name: '活动',
-        path: 'register',
+        path: 'activity',
       },
       {
         name: '计划',
-        path: 'register-result',
+        path: 'plan',
       },
       {
         name: '踪迹',
-        path: 'register-result',
+        path: 'trail',
       },
     ],
   },
@@ -185,7 +185,13 @@ const menuData = [
     children: [
       {
         name: '组件库',
-        path: 'login',
+        path: 'component',
+        // children: [
+        //   {
+        //     name: '组件库',
+        //     path: 'component',
+        //   },
+        // ],
       },
     ],
   },
@@ -197,15 +203,15 @@ const menuData = [
     children: [
       {
         name: '日记',
-        path: 'register',
+        path: 'diary',
       },
       {
         name: '笔记',
-        path: 'register-result',
+        path: 'notes',
       },
       {
         name: '技术分享',
-        path: 'register-result',
+        path: 'share',
       },
     ],
   },
@@ -215,18 +221,18 @@ const menuData = [
     icon: 'user',
     path: 'github',
     children: [
-      {
-        name: '日记',
-        path: 'register',
-      },
-      {
-        name: '笔记',
-        path: 'register-result',
-      },
-      {
-        name: '技术分享',
-        path: 'register-result',
-      },
+      // {
+      //   name: '日记',
+      //   path: 'register',
+      // },
+      // {
+      //   name: '笔记',
+      //   path: 'register-result',
+      // },
+      // {
+      //   name: '技术分享',
+      //   path: 'register-result',
+      // },
     ],
   },
 
