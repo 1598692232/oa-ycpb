@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 
 import { Button } from 'antd';
 
-// import styles from './index.less';
+import styles from './index.less';
 
 export default class Bill extends PureComponent {
   static defaultProps = {};
@@ -20,7 +20,7 @@ export default class Bill extends PureComponent {
 
   render() {
     return (
-      <div>
+      <div className={styles.a}>
         <Button>Component Sample</Button>
       </div>
     );
