@@ -5,7 +5,7 @@ import { Button } from 'antd';
 
 import styles from './index.less';
 
-export default class Learning extends PureComponent {
+export default class Auth extends PureComponent {
   static defaultProps = {};
 
   state = {};
@@ -21,7 +21,7 @@ export default class Learning extends PureComponent {
   render() {
     return (
       <div className={styles.a}>
-        <Button>Component Bill</Button>
+        <Button>Component Blog</Button>
         {/* <FooterToolbar></FooterToolbar> */}
       </div>
     );

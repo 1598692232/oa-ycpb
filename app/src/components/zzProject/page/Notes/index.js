@@ -5,7 +5,7 @@ import { Button } from 'antd';
 
 import styles from './index.less';
 
-export default class Blog extends PureComponent {
+export default class Notes extends PureComponent {
   static defaultProps = {};
 
   state = {};
