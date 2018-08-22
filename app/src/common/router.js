@@ -191,7 +191,7 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, [], () => import('../routes/User/RegisterResult')),
     },
     '/daily/bill': {
-      component: dynamicWrapper(app, [], () => import('../routes/Daily/Bill')),
+      component: dynamicWrapper(app, [], () => import('../routes/Daily/BillPage')),
     },
     // '/user/:id': {
     //   component: dynamicWrapper(app, [], () => import('../routes/User/SomeComponent')),
