@@ -185,7 +185,7 @@ const menuData = [
     children: [
       {
         name: '组件库',
-        path: 'component',
+        path: 'c',
         // children: [
         //   {
         //     name: '组件库',

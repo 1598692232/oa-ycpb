@@ -193,6 +193,33 @@ export const getRouterData = app => {
     '/daily/bill': {
       component: dynamicWrapper(app, [], () => import('../routes/Daily/BillPage')),
     },
+    '/daily/activity': {
+      component: dynamicWrapper(app, [], () => import('../routes/Daily/ActivityPage')),
+    },
+    '/daily/plan': {
+      component: dynamicWrapper(app, [], () => import('../routes/Daily/PlanPage')),
+    },
+    '/daily/trail': {
+      component: dynamicWrapper(app, [], () => import('../routes/Daily/TrailPage')),
+    },
+    '/learning/c': {
+      component: dynamicWrapper(app, [], () => import('../routes/Learning/LearningCPage')),
+    },
+    '/blog/diary': {
+      component: dynamicWrapper(app, [], () => import('../routes/Blog/DiaryPage')),
+    },
+    '/blog/notes': {
+      component: dynamicWrapper(app, [], () => import('../routes/Blog/DiaryPage')),
+    },
+    '/blog/share': {
+      component: dynamicWrapper(app, [], () => import('../routes/Blog/SharePage')),
+    },
+    '/github': {
+      component: dynamicWrapper(app, [], () => import('../routes/GithubPlan/GithubPlanPage')),
+    },
+    '/auth': {
+      component: dynamicWrapper(app, [], () => import('../routes/Auth/AuthPage')),
+    },
     // '/user/:id': {
     //   component: dynamicWrapper(app, [], () => import('../routes/User/SomeComponent')),
     // },
