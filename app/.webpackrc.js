@@ -14,6 +14,8 @@ export default {
   },
   alias: {
     components: path.resolve(__dirname, 'src/components/'),
+    zzp: path.resolve(__dirname, 'src/components/zzProject/page/'),
+    zzc: path.resolve(__dirname, 'src/components/zzProject/components/'),
   },
   ignoreMomentLocale: true,
   theme: './src/theme.js',

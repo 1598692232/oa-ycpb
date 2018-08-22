@@ -5,7 +5,7 @@ import { Button } from 'antd';
 
 import styles from './index.less';
 
-export default class Bill extends PureComponent {
+export default class Github extends PureComponent {
   static defaultProps = {};
 
   state = {};
@@ -21,7 +21,8 @@ export default class Bill extends PureComponent {
   render() {
     return (
       <div className={styles.a}>
-        <Button>Component Sample</Button>
+        <Button>Component Bill</Button>
+        {/* <FooterToolbar></FooterToolbar> */}
       </div>
     );
   }
