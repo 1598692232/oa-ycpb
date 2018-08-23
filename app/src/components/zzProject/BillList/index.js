@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { routerRedux, Route, Switch } from 'dva/router';
 import { connect } from 'dva';
+import { Input } from 'antd';
 import PageHeaderLayout from 'layouts/PageHeaderLayout';
 import { getRoutes } from 'utils/utils';
 
@@ -26,42 +27,38 @@ export default class SearchList extends Component {
   render() {
     const tabList = [
       {
-        key: 'list',
+        key: 'articles',
         tab: '文章',
       },
       {
-        key: 'chart',
-        tab: '图表',
+        key: 'projects',
+        tab: '项目',
       },
       {
-        key: 'cate',
-        tab: '分类',
-      },
-      {
-        key: 'add',
-        tab: '添加',
+        key: 'applications',
+        tab: '应用',
       },
     ];
 
-    // const mainSearch = (
-    //   <div style={{ textAlign: 'center' }}>
-    //     <Input.Search
-    //       placeholder="请输入"
-    //       enterButton="搜索"
-    //       size="large"
-    //       onSearch={this.handleFormSubmit}
-    //       style={{ width: 522 }}
-    //     />
-    //   </div>
-    // );
+    const mainSearch = (
+      <div style={{ textAlign: 'center' }}>
+        <Input.Search
+          placeholder="请输入"
+          enterButton="搜索"
+          size="large"
+          onSearch={this.handleFormSubmit}
+          style={{ width: 522 }}
+        />
+      </div>
+    );
 
     const { match, routerData, location } = this.props;
     const routes = getRoutes(match.path, routerData);
 
     return (
       <PageHeaderLayout
-        title="账单管理"
-        // content={mainSearch}
+        title="搜索列表"
+        content={mainSearch}
         tabList={tabList}
         tabActiveKey={location.pathname.replace(`${match.path}/`, '')}
         onTabChange={this.handleTabChange}

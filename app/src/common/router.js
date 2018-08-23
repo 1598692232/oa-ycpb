@@ -191,7 +191,19 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, [], () => import('../routes/User/RegisterResult')),
     },
     '/daily/bill': {
-      component: dynamicWrapper(app, [], () => import('../routes/Daily/BillPage')),
+      component: dynamicWrapper(app, ['list'], () => import('../routes/Daily/BillPage')),
+    },
+    '/daily/bill/list': {
+      component: dynamicWrapper(app, ['list'], () => import('../routes/Daily/List')),
+    },
+    '/daily/bill/chart': {
+      component: dynamicWrapper(app, ['list'], () => import('../routes/Daily/Chart')),
+    },
+    '/daily/bill/cate': {
+      component: dynamicWrapper(app, ['list'], () => import('../routes/Daily/Cate')),
+    },
+    '/daily/bill/add': {
+      component: dynamicWrapper(app, ['list'], () => import('../routes/Daily/Add')),
     },
     '/daily/activity': {
       component: dynamicWrapper(app, [], () => import('../routes/Daily/ActivityPage')),
