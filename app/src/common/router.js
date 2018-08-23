@@ -217,15 +217,24 @@ export const getRouterData = app => {
     '/learning/c': {
       component: dynamicWrapper(app, [], () => import('../routes/Learning/LearningCPage')),
     },
+    '/blog': {
+      component: dynamicWrapper(app, [], () => import('../routes/Blog/BlogPage')),
+    },
     '/blog/diary': {
       component: dynamicWrapper(app, [], () => import('../routes/Blog/DiaryPage')),
     },
     '/blog/notes': {
-      component: dynamicWrapper(app, [], () => import('../routes/Blog/DiaryPage')),
+      component: dynamicWrapper(app, [], () => import('../routes/Blog/NotesPage')),
     },
     '/blog/share': {
       component: dynamicWrapper(app, [], () => import('../routes/Blog/SharePage')),
     },
+    '/blog/add': {
+      component: dynamicWrapper(app, [], () => import('../routes/Blog/Add')),
+    },
+    // '/blog/edit': {
+    //   component: dynamicWrapper(app, [], () => import('../routes/Blog/EditPage')),
+    // },
     '/github': {
       component: dynamicWrapper(app, [], () => import('../routes/GithubPlan/GithubPlanPage')),
     },

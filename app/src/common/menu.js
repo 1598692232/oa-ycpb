@@ -156,29 +156,34 @@ const menuData = [
   },
   {
     name: '日常',
-    icon: 'user',
+    icon: 'switcher',
     path: 'daily',
     // authority: 'guest',
     children: [
       {
         name: '账单',
         path: 'bill',
+        icon: 'file-text',
         children: [
           {
             name: '列表',
             path: 'list',
+            icon: 'profile',
           },
           {
             name: '图表',
             path: 'chart',
+            icon: 'table',
           },
           {
             name: '分类',
             path: 'cate',
+            icon: 'bars',
           },
           {
             name: '添加',
             path: 'add',
+            icon: 'usergroup-add',
           },
         ],
       },
@@ -196,47 +201,55 @@ const menuData = [
       },
     ],
   },
-  {
-    name: '学习',
-    icon: 'user',
-    path: 'learning',
-    children: [
-      {
-        name: '组件库',
-        path: 'c',
-        // children: [
-        //   {
-        //     name: '组件库',
-        //     path: 'component',
-        //   },
-        // ],
-      },
-    ],
-  },
+  // {
+  //   name: '学习',
+  //   icon: 'user',
+  //   path: 'learning',
+  //   children: [
+  //     {
+  //       name: '组件库',
+  //       path: 'c',
+  //       // children: [
+  //       //   {
+  //       //     name: '组件库',
+  //       //     path: 'component',
+  //       //   },
+  //       // ],
+  //     },
+  //   ],
+  // },
 
   {
     name: '博客',
-    icon: 'user',
+    icon: 'book',
     path: 'blog',
     children: [
       {
         name: '日记',
         path: 'diary',
+        icon: 'file-word',
       },
       {
         name: '笔记',
         path: 'notes',
+        icon: 'edit',
       },
       {
         name: '技术分享',
         path: 'share',
+        icon: 'share-alt',
+      },
+      {
+        name: '添加/编辑',
+        path: 'add',
+        icon: 'edit',
       },
     ],
   },
 
   {
     name: 'github任务',
-    icon: 'user',
+    icon: 'github',
     path: 'github',
     children: [
       // {
