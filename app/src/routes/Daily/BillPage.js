@@ -9,14 +9,17 @@ export default class SearchList extends Component {
   handleTabChange = key => {
     const { dispatch, match } = this.props;
     switch (key) {
-      case 'articles':
-        dispatch(routerRedux.push(`${match.url}/articles`));
+      case 'list':
+        dispatch(routerRedux.push(`${match.url}/list`));
         break;
-      case 'applications':
-        dispatch(routerRedux.push(`${match.url}/applications`));
+      case 'chart':
+        dispatch(routerRedux.push(`${match.url}/chart`));
         break;
-      case 'projects':
-        dispatch(routerRedux.push(`${match.url}/projects`));
+      case 'cate':
+        dispatch(routerRedux.push(`${match.url}/cate`));
+        break;
+      case 'add':
+        dispatch(routerRedux.push(`${match.url}/add`));
         break;
       default:
         break;
@@ -27,7 +30,7 @@ export default class SearchList extends Component {
     const tabList = [
       {
         key: 'list',
-        tab: '文章',
+        tab: '列表',
       },
       {
         key: 'chart',
