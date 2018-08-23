@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Form, Input, Button, Card } from 'antd';
 import ReactQuill from 'react-quill'; // ES6
-// import styles from './Add.less';
+import styles from './Add.less';
 
 const FormItem = Form.Item;
 // const { Option } = Select;
@@ -93,12 +93,14 @@ export default class Add extends PureComponent {
               </label>
             </div>
             <div className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12 ant-col-md-17 quill">
-              <ReactQuill
-                value={this.state.text}
-                modules={modules}
-                theme="snow"
-                onChange={this.handleChange}
-              />
+              <div className={styles.quill}>
+                <ReactQuill
+                  value={this.state.text}
+                  modules={modules}
+                  theme="snow"
+                  onChange={this.handleChange}
+                />
+              </div>
             </div>
           </div>
 
