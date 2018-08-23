@@ -92,7 +92,7 @@ export default class Add extends PureComponent {
                 标题
               </label>
             </div>
-            <div className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12 ant-col-md-17 quill">
+            <div className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12 ant-col-md-17">
               <div className={styles.quill}>
                 <ReactQuill
                   value={this.state.text}
