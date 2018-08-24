@@ -10,7 +10,7 @@ for (let i = 0; i < 46; i += 1) {
     dateTime: new Date(`2017-07-${Math.floor(i / 2) + 1}`),
     address: `新地址${i}`,
     price: `${parseFloat(Math.random() * 1000).toFixed(2)}`,
-    cate: `${['吃饭', '娱乐', '看病'][parseInt(Math.random(), 1) % 3]}`,
+    cate: `${['吃饭', '娱乐', '看病'][parseInt(Math.random() * 10, 10) % 3]}`,
     desc: '那天干嘛的',
     otherDesc: '备注大师大师大师啊实打实的',
   });
