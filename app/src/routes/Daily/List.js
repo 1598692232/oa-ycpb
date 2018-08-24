@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'dva';
-import moment from 'moment';
+// import moment from 'moment';
 import {
   Card,
   Row,
@@ -12,7 +12,7 @@ import {
   Button,
   InputNumber,
   DatePicker,
-  Badge,
+  // Badge,
   Divider,
 } from 'antd';
 import StandardTable from 'components/StandardTable';
@@ -25,8 +25,8 @@ const getValue = obj =>
   Object.keys(obj)
     .map(key => obj[key])
     .join(',');
-const statusMap = ['default', 'processing', 'success', 'error'];
-const status = ['关闭', '运行中', '已上线', '异常'];
+// const statusMap = ['default', 'processing', 'success', 'error'];
+// const status = ['关闭', '运行中', '已上线', '异常'];
 
 @connect(({ rule, loading }) => ({
   rule,
@@ -43,7 +43,7 @@ export default class List extends PureComponent {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch({
-      type: 'rule/fetch',
+      type: 'rule/fetchPrice',
       payload: {
         page: 1,
       },
@@ -71,7 +71,7 @@ export default class List extends PureComponent {
     }
 
     dispatch({
-      type: 'rule/fetch',
+      type: 'rule/fetchPrice',
       payload: params,
     });
   };
@@ -83,7 +83,7 @@ export default class List extends PureComponent {
       formValues: {},
     });
     dispatch({
-      type: 'rule/fetch',
+      type: 'rule/fetchPrice',
       payload: {},
     });
   };
@@ -144,7 +144,7 @@ export default class List extends PureComponent {
       });
 
       dispatch({
-        type: 'rule/fetch',
+        type: 'rule/fetchPrice',
         payload: values,
       });
     });
@@ -296,16 +296,16 @@ export default class List extends PureComponent {
     const { selectedRows } = this.state;
     const columns = [
       {
-        title: '规则编号',
-        dataIndex: 'no',
+        title: 'ID',
+        dataIndex: 'id',
       },
       {
-        title: '描述',
-        dataIndex: 'description',
+        title: '账单名称',
+        dataIndex: 'priceName',
       },
       {
-        title: '服务调用次数',
-        dataIndex: 'callNo',
+        title: '日期',
+        dataIndex: 'dateTime',
         sorter: true,
         align: 'right',
         render: val => `${val} 万`,
@@ -313,36 +313,54 @@ export default class List extends PureComponent {
         needTotal: true,
       },
       {
-        title: '状态',
-        dataIndex: 'status',
-        filters: [
-          {
-            text: status[0],
-            value: 0,
-          },
-          {
-            text: status[1],
-            value: 1,
-          },
-          {
-            text: status[2],
-            value: 2,
-          },
-          {
-            text: status[3],
-            value: 3,
-          },
-        ],
-        onFilter: (value, record) => record.status.toString() === value,
-        render(val) {
-          return <Badge status={statusMap[val]} text={status[val]} />;
-        },
+        title: '地点',
+        dataIndex: 'address',
+        // filters: [
+        //   {
+        //     text: status[0],
+        //     value: 0,
+        //   },
+        //   {
+        //     text: status[1],
+        //     value: 1,
+        //   },
+        //   {
+        //     text: status[2],
+        //     value: 2,
+        //   },
+        //   {
+        //     text: status[3],
+        //     value: 3,
+        //   },
+        // ],
+        // onFilter: (value, record) => record.status.toString() === value,
+        // render(val) {
+        //   return <Badge status={statusMap[val]} text={status[val]} />;
+        // },
       },
       {
-        title: '更新时间',
-        dataIndex: 'updatedAt',
+        title: '金额',
+        dataIndex: 'price',
         sorter: true,
-        render: val => <span>{moment(val).format('YYYY-MM-DD HH:mm:ss')}</span>,
+        // render: val => <span>{moment(val).format('YYYY-MM-DD HH:mm:ss')}</span>,
+      },
+      {
+        title: '类别',
+        dataIndex: 'cate',
+        sorter: true,
+        // render: val => <span>{moment(val).format('YYYY-MM-DD HH:mm:ss')}</span>,
+      },
+      {
+        title: '描述',
+        dataIndex: 'desc',
+        sorter: true,
+        // render: val => <span>{moment(val).format('YYYY-MM-DD HH:mm:ss')}</span>,
+      },
+      {
+        title: '备注',
+        dataIndex: 'otherDesc',
+        sorter: true,
+        // render: val => <span>{moment(val).format('YYYY-MM-DD HH:mm:ss')}</span>,
       },
       {
         title: '操作',

@@ -1,4 +1,4 @@
-import { queryRule, removeRule, addRule } from '../services/api';
+import { queryRule, removeRule, addRule, queryPrice } from '../services/api';
 
 export default {
   namespace: 'rule',
@@ -13,6 +13,13 @@ export default {
   effects: {
     *fetch({ payload }, { call, put }) {
       const response = yield call(queryRule, payload);
+      yield put({
+        type: 'save',
+        payload: response,
+      });
+    },
+    *fetchPrice({ payload }, { call, put }) {
+      const response = yield call(queryPrice, payload);
       yield put({
         type: 'save',
         payload: response,
